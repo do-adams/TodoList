@@ -16,8 +16,8 @@ $("input[type='text']").keypress(function(event) {
 		let todoText = $(this).val();
 		// check for empty/whitespace string
 		if (todoText.trim() === "") return;
-		
+
 		$(this).val("");
-		$("ul").append(`<li><span>X</span> ${todoText}</li>`);
+		$("ul").append(`<li><span><i class="fa fa-trash"></i></span> ${todoText}</li>`);
 	}
 });
