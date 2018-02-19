@@ -14,6 +14,9 @@ $("ul").on("click", "span", function(event) {
 $("input[type='text']").keypress(function(event) {
 	if (event.which === 13) {
 		let todoText = $(this).val();
+		// check for empty/whitespace string
+		if (todoText.trim() === "") return;
+		
 		$(this).val("");
 		$("ul").append(`<li><span>X</span> ${todoText}</li>`);
 	}
